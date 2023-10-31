@@ -19,5 +19,6 @@ SELECT *
 FROM intermediary i, address a
 WHERE i.id_address = a.id_address
 
-SELECT name, jurisdiction_description as "Pays_d'origine"
-FROM entity 
+SELECT e.name, c.country
+FROM entity e, country c, address a
+WHERE e.id_address = a.id_address AND a.countries = c.code
