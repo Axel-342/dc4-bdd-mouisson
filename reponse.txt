@@ -18,3 +18,6 @@ WHERE incorporation_date > "2000-01-01";
 SELECT * 
 FROM intermediary i, address a
 WHERE i.id_address = a.id_address
+
+SELECT name, jurisdiction_description as "Pays_d'origine"
+FROM entity 
