@@ -5,3 +5,5 @@
 3. Select * from officer where country_id = 5
 
 4. Select count(*) from entity
+
+5. Select * from entity where incorporation_date > "2000-01-01"
