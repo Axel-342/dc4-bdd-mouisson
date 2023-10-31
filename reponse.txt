@@ -3,3 +3,5 @@
 2. Select name from entity
 
 3. Select * from officer where country_id = 5
+
+4. Select count(*) from entity
