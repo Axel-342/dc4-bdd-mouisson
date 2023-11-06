@@ -42,3 +42,9 @@ WHERE url != "" OR url != "null"
 SELECT e.name AS "Nom_entité", i.name AS "Intermédiare_associés"
 FROM entity e, intermediary i, assoc_inter_entity aie
 WHERE e.id = aie.entity AND aie.inter = i.id
+
+SELECT i.name, COUNT(*)
+FROM entity e, intermediary i, assoc_inter_entity aie
+WHERE e.id = aie.entity AND aie.inter = i.id
+GROUP BY i.name
+
