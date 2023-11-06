@@ -30,3 +30,7 @@ UNION ALL
 SELECT 'Intermediary' as Type, i.name 
 FROM intermediary i, assoc_intermediaries ai
 WHERE i.id = ai.interm1
+
+SELECT e.name, s.source
+FROM entity e, source s
+WHERE e.source = s.id
