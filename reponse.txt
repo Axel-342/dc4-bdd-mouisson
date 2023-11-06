@@ -43,8 +43,11 @@ SELECT e.name AS "Nom_entité", i.name AS "Intermédiare_associés"
 FROM entity e, intermediary i, assoc_inter_entity aie
 WHERE e.id = aie.entity AND aie.inter = i.id
 
-SELECT i.name, COUNT(*)
+SELECT i.name AS "Nom_intermediaire", COUNT(*) as "entites_associees"
 FROM entity e, intermediary i, assoc_inter_entity aie
 WHERE e.id = aie.entity AND aie.inter = i.id
 GROUP BY i.name
 
+SELECT o.name, s.status
+FROM officer o, intermediary i, status s, assoc_inter_offi aio
+WHERE o.id = aio.officer AND aio.inter = i.id AND i.status_id = s.id
