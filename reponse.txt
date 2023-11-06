@@ -34,3 +34,7 @@ WHERE i.id = ai.interm1
 SELECT e.name, s.source
 FROM entity e, source s
 WHERE e.source = s.id
+
+SELECT *
+FROM officer
+WHERE url != "" OR url != "null"
