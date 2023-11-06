@@ -51,3 +51,7 @@ GROUP BY i.name
 SELECT o.name, e.status
 FROM officer o, assoc_officer_entity aoe, entity e
 WHERE o.id = aoe.officer AND aoe.entity = e.id
+
+SELECT *
+FROM entity
+WHERE lifetime > 3652.5
