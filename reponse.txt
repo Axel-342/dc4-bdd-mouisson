@@ -55,3 +55,7 @@ WHERE o.id = aoe.officer AND aoe.entity = e.id
 SELECT *
 FROM entity
 WHERE lifetime > 3652.5
+
+SELECT e.name, o.name, aoe.start_date
+FROM entity e, officer o, assoc_officer_entity aoe
+WHERE e.id=aoe.entity AND aoe.officer=o.id AND aoe.start_date < "2010-01-01"
