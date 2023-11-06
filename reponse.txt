@@ -48,6 +48,6 @@ FROM entity e, intermediary i, assoc_inter_entity aie
 WHERE e.id = aie.entity AND aie.inter = i.id
 GROUP BY i.name
 
-SELECT o.name, s.status
-FROM officer o, intermediary i, status s, assoc_inter_offi aio
-WHERE o.id = aio.officer AND aio.inter = i.id AND i.status_id = s.id
+SELECT o.name, e.status
+FROM officer o, assoc_officer_entity aoe, entity e
+WHERE o.id = aoe.officer AND aoe.entity = e.id
