@@ -64,3 +64,9 @@ SELECT c.country, Count() as "Nombre d'entite"
 FROM country c, address a, entity e
 WHERE c.code = a.countries AND a.id_address = e.id_address
 GROUP BY c.country 
+
+SELECT i.name, COUNT(aie.entity) as "nb_entite"
+FROM intermediary i, assoc_inter_entity aie 
+WHERE i.id = aie.inter
+GROUP BY i.name
+HAVING nb_entite > 5
